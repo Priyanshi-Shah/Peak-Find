@@ -4,7 +4,7 @@ import unittest
 def get_peak(arr):
     if not arr:
         return None
-    if len(arr)>1:
+    if len(arr) > 1:
         return max(arr)
     else:
         return arr[0]
@@ -22,9 +22,10 @@ class PeakTest(unittest.TestCase):
         self.assertEqual(2, get_peak([2]))
 
     def test_check_for_two_elements(self):
-        self.assertEqual(2, get_peak([1,2]))
+        self.assertEqual(2, get_peak([1, 2]))
 
-
+    def test_check_for_three_elements(self):
+        self.assertEqual(3, get_peak([1, 2, 3]))
 
 
 if __name__ == '__main__':
